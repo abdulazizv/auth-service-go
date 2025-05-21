@@ -175,6 +175,7 @@ func (s *authService) RefreshToken(ctx context.Context, refreshToken string) (*m
 type Claims struct {
 	UserID int64  `json:"user_id"`
 	Type   string `json:"type"` // "access" or "refresh"
+	RoleID int64  `json:"role_id"`
 	jwt.RegisteredClaims
 }
 
@@ -183,6 +184,7 @@ func generateAccessToken(user *models.User) (string, error) {
 	claims := &Claims{
 		UserID: user.ID,
 		Type:   "access",
+		RoleID: user.RoleID,
 		RegisteredClaims: jwt.RegisteredClaims{
 			ExpiresAt: jwt.NewNumericDate(expirationTime),
 			IssuedAt:  jwt.NewNumericDate(time.Now()),
