@@ -45,7 +45,6 @@ definitions:
     - password
     - role_id
     type: object
-host: localhost:3001
 info:
   contact: {}
   description: This is a sample authentication service with JWT tokens.

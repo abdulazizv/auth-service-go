@@ -25,7 +25,6 @@ import (
 // @title Authentication Service API
 // @version 1.0
 // @description This is a sample authentication service with JWT tokens.
-// @host localhost:3001
 // @BasePath /api
 // @schemes http https
 // @securityDefinitions.apikey BearerAuth
