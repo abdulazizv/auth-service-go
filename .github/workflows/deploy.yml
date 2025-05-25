@@ -33,7 +33,7 @@ jobs:
             docker build -t my-auth-service-app .
             docker stop my-auth-service-app || true
             docker rm my-auth-service-app || true
-            docker run -d --name my-auth-service-app -p 8080:${PORT:-8080} \
+            docker run -d --name my-auth-service-app -p 3001:${PORT:-3001} \
               -e HOST=${{ secrets.HOST }} \
               -e PORT=${{ secrets.PORT }} \
               -e DB_HOST=${{ secrets.DB_HOST }} \
