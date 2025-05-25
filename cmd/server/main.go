@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 	_ "github.com/lib/pq" // PostgreSQL driver
 	"go.uber.org/fx"
 
@@ -65,10 +64,6 @@ func NewDatabaseConnection(config *config.Config) (*sql.DB, error) {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
 
 	app := fx.New(
 		fx.Provide(
