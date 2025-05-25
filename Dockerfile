@@ -11,4 +11,6 @@ RUN go build -o main ./cmd/server
 
 RUN chmod +x run.sh
 
+EXPOSE 3001
+
 CMD ["./main"]
