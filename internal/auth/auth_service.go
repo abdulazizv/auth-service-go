@@ -171,7 +171,6 @@ func (s *authService) RefreshToken(ctx context.Context, refreshToken string) (*m
 	return user, accessToken, newRefreshToken, nil
 }
 
-// Claims represents the JWT claims
 type Claims struct {
 	UserID int64  `json:"user_id"`
 	Type   string `json:"type"` // "access" or "refresh"
