@@ -11,4 +11,4 @@ RUN go build -o main ./cmd/server
 
 RUN chmod +x run.sh
 
-CMD ["./run.sh"]
+CMD ["./main"]
